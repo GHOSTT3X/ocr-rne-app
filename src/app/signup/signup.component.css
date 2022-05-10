@@ -1,7 +1,6 @@
 * {
     margin: 0px;
     padding: 0px;
-
 }
 
 .inputs{
@@ -11,6 +10,7 @@
 }
 
 .toolbar{
+    
     margin-bottom: 10px;
 }
 
@@ -24,12 +24,4 @@
     margin-top: 10px;
 }
 
-.img{
-   
-   background-size: cover;
-   width: 600px;
-   height: 300px;
-   background-repeat: no-repeat;
-
-}
 
