@@ -1,0 +1,35 @@
+* {
+    margin: 0px;
+    padding: 0px;
+
+}
+
+.inputs{
+    padding: 4px;
+    font-family: Montserrat;
+    
+}
+
+.toolbar{
+    margin-bottom: 10px;
+}
+
+.button{
+    font-family: Montserrat;
+    margin-top: 20px;
+}
+
+.alink{
+    font-family: Montserrat;
+    margin-top: 10px;
+}
+
+.img{
+   
+   background-size: cover;
+   width: 600px;
+   height: 300px;
+   background-repeat: no-repeat;
+
+}
+

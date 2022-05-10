@@ -1,1 +1,25 @@
-<p>signup works!</p>
+<div class="bigdiv" fxLayoutAlign="center center" fxFill>
+    <mat-card fxFlex="27" class="card">
+        <mat-toolbar color="warn" fxLayoutAlign="center center" class="toolbar">Sign up</mat-toolbar>
+        <form fxLayoutAlign="stretch" fxLayout="column">
+            <mat-form-field>
+              <mat-label >Username</mat-label>
+              <input  matInput  class="inputs">
+            </mat-form-field>
+            <mat-form-field>
+                <mat-label>Email</mat-label>
+                <input  matInput  class="inputs" type="email">
+              </mat-form-field>
+            
+            <mat-form-field>
+                <mat-label >Password</mat-label>
+                <input  matInput  class="inputs" type="password" >
+              </mat-form-field>
+              <button mat-raised-button type="submit" color="warn" class="button">Register</button> 
+              <a routerLink="/signin" class="alink">You Already have an account? Sign in</a>   
+          </form>
+
+          
+
+    </mat-card>
+</div>
