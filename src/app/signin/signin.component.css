@@ -1,7 +1,14 @@
-.bigDiv{
-    background-image:url(/src/assets/image/background2.png);
-}
+.image{
+    background-repeat: no-repeat;
+    min-height: 100%;
+    min-width: 990px;
+    width: 100%;
+    height: auto;
+    position: fixed;
+    top: 0;
+    left: 0;
 
+}
 .inputs{
     padding: 4px;
     font-family: Montserrat;
