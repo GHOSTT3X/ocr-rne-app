@@ -1,21 +1,59 @@
 <div class="bigDiv" fxLayoutAlign="center center" fxFill>
-    <img class="image" src="../../assets/image/background2.png">
-    <mat-card fxFlex="27" class="card">
-        <mat-toolbar color="warn" fxLayoutAlign="center center" class="toolbar">Sign in</mat-toolbar>
-        <form fxLayoutAlign="stretch" fxLayout="column">
+  <<<<<<< HEAD
+  <img class="image" src="../../assets/image/background2.png" />
+  <mat-card fxFlex="27" class="card">
+    <mat-toolbar color="warn" fxLayoutAlign="center center" class="toolbar"
+      >Sign in</mat-toolbar
+    >
+    <form fxLayoutAlign="stretch" fxLayout="column">
+      <mat-form-field>
+        <mat-label>Username</mat-label>
+        <input matInput class="inputs" />
+        =======
+        <img src="/src/assets/image/background2.png" />
+        <mat-card fxFlex="27" class="card">
+          <mat-toolbar
+            color="warn"
+            fxLayoutAlign="center center"
+            class="toolbar"
+            >Sign in</mat-toolbar
+          >
+          <form fxLayoutAlign="stretch" fxLayout="column">
             <mat-form-field>
-              <mat-label >Username</mat-label>
-              <input  matInput  class="inputs">
+              <mat-label>Username</mat-label>
+              <input
+                matInput
+                class="inputs"
+                name="username"
+                [(ngModel)]="username"
+              />
             </mat-form-field>
             <mat-form-field>
-                <mat-label >Password</mat-label>
-                <input  matInput  class="inputs" type="password">
-              </mat-form-field>
-              <button mat-raised-button type="submit" color="warn" class="button">Login</button> 
-              <a routerLink="/signup" class="alink">You don't have an account? Sign up</a>   
+              <mat-label>Password</mat-label>
+              <input
+                matInput
+                name="password"
+                class="inputs"
+                type="password"
+                [(ngModel)]="password"
+              />
+              >>>>>>> 18b7ca6611cfc6f15ebb2714feec1c5e6d8faa51
+            </mat-form-field>
+            <button
+              mat-raised-button
+              type="button"
+              color="warn"
+              class="button"
+              (click)="loginNow(username, password)"
+            >
+              Login
+            </button>
+            <a routerLink="/signup" class="alink"
+              >You don't have an account? Sign up</a
+            >
           </form>
-
-          
-
-    </mat-card>
+        </mat-card>
+      </mat-form-field>
+    </form></mat-card
+  >
 </div>
