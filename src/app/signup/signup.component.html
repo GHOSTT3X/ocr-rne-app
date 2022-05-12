@@ -18,12 +18,17 @@
         <mat-label>Password</mat-label>
         <input name="password" matInput class="inputs" type="password" />
       </mat-form-field>
+      <mat-form-field>
+        <mat-label>Confirm password</mat-label>
+        <input name="confirmPassword" matInput class="inputs" type="password" />
+      </mat-form-field>
       <button mat-raised-button type="submit" color="warn" class="button">
         Register
       </button>
-      <a routerLink="/signin" class="alink"
-        >You Already have an account? Sign in</a
-      >
+      <div fxLayout="center center">
+        <p>You don't have an account?</p>
+        <b><a routerLink="/signin" class="alink">Sign in</a></b>
+      </div>
     </form>
   </mat-card>
 </div>

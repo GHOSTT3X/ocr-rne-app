@@ -36,4 +36,20 @@
     margin-top: 10px;
 }
 
+p{
+    font-size: 15px;
+    position: relative;
+    top: 10px;
+    margin-bottom: 20px;
+    padding-top: 12px;
+    color: black;
+   
+}
+a{
+    font-size: 14px;
+    position: relative;
+    top: 21px;
+    left: 5px;
+
+}
 
