@@ -11,7 +11,13 @@
       </mat-form-field>
       <mat-form-field>
         <mat-label>Email</mat-label>
-        <input name="email" matInput class="inputs" type="email" />
+        <input
+          name="email"
+          matInput
+          class="inputs"
+          type="email"
+          pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+        />
       </mat-form-field>
 
       <mat-form-field>

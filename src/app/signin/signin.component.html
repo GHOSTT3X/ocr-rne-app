@@ -4,10 +4,32 @@
     <mat-toolbar color="warn" fxLayoutAlign="center center" class="toolbar"
       >Sign up</mat-toolbar
     >
-    <form fxLayoutAlign="stretch" fxLayout="column">
+    <form
+      #loginForm="ngForm"
+      fxLayoutAlign="stretch"
+      fxLayout="column"
+      (ngSubmit)="loginUser()"
+    >
+      <small class="error"
+        ><b>{{ message }}</b></small
+      >
       <mat-form-field>
         <mat-label>Username</mat-label>
-        <input matInput name="username" class="inputs" [(ngModel)]="username" />
+        <input
+          matInput
+          name="username"
+          class="inputs"
+          [(ngModel)]="user.username"
+          required
+          #username="ngModel"
+          [class.is-invalid]="username.invalid && username.touched"
+        />
+        <small
+          class="error-email"
+          [class.d-none]="username.valid || username.untouched"
+        >
+          Username Field is required
+        </small>
       </mat-form-field>
       <mat-form-field>
         <mat-label>Password</mat-label>
@@ -16,15 +38,24 @@
           name="password"
           class="inputs"
           type="password"
-          [(ngModel)]="password"
+          [(ngModel)]="user.password"
+          required
+          #password="ngModel"
+          [class.is-invalid]="password.invalid && password.touched"
         />
+        <small
+          class="error-password"
+          [class.d-none]="password.valid || password.untouched"
+        >
+          Password Field is required
+        </small>
       </mat-form-field>
       <button
+        [disabled]="loginForm.invalid"
         mat-raised-button
-        type="button"
+        type="submit"
         color="warn"
         class="button"
-        (click)="loginNow(username, password)"
       >
         Login
       </button>

@@ -11,6 +11,7 @@ export class UserService {
   constructor(private _http: HttpClient) { }
 
   public loginUser(user :User):Observable<any> {
+    return this._http.post<any>("http://localhost:8070/signin", user)
 
 
   }

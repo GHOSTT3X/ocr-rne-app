@@ -1,4 +1,8 @@
+import { UserService } from './../user.service';
 import { Component, OnInit } from '@angular/core';
+import { User } from '../user';
+import { Route, Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-signin',
@@ -6,14 +10,24 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./signin.component.css'],
 })
 export class SigninComponent implements OnInit {
-  username: string = '';
-  password: string = '';
+  user = new User();
+  message = '';
 
-  constructor() {}
-
-  loginNow(username: string, password: string) {
-    console.log(username + password);
-  }
+  constructor(private _service : UserService, private _route: Router) { }
 
   ngOnInit(): void {}
+
+  loginUser(){
+    this._service.loginUser(this.user).subscribe(
+      data => {
+        console.log("Res recieved!");
+        this._route.navigate(['/form'])
+
+      },
+      error =>{
+      console.log("Exception Occured!");
+      this.message = "Incorrect username or password";
+      }
+    )
+  }
 }
