@@ -4,31 +4,101 @@
     <mat-toolbar color="warn" fxLayoutAlign="center center" class="toolbar"
       >Sign up</mat-toolbar
     >
-    <form fxLayoutAlign="stretch" fxLayout="column">
+    <form
+      #registerForm="ngForm"
+      (ngSubmit)="registerUser()"
+      fxLayoutAlign="stretch"
+      fxLayout="column"
+    >
+      <small [class.text-danger]>
+        {{ message }}
+      </small>
       <mat-form-field>
         <mat-label>Username</mat-label>
-        <input name="username" matInput class="inputs" />
+        <input
+          name="username"
+          matInput
+          class="inputs"
+          [(ngModel)]="user.username"
+          #username="ngModel"
+          [class.is.invalid]="username.invalid && username.touched"
+        />
+        <small
+          class="error"
+          [class.d-none]="username.valid || username.untouched"
+        >
+          Username field is required
+        </small>
       </mat-form-field>
       <mat-form-field>
         <mat-label>Email</mat-label>
         <input
+          [(ngModel)]="user.email"
+          #email="ngModel"
+          [class.is-invalid]="email.invalid && email.touched"
           name="email"
           matInput
           class="inputs"
           type="email"
           pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
         />
+        <div *ngIf="email.errors && email.invalid && email.touched">
+          <small class="text-danger" *ngIf="email.errors.required">
+            Email field is required
+          </small>
+
+          <small class="text-danger" *ngIf="email.errors.pattern">
+            Email must be valid
+          </small>
+        </div>
       </mat-form-field>
 
       <mat-form-field>
         <mat-label>Password</mat-label>
-        <input name="password" matInput class="inputs" type="password" />
+        <input
+          matInput
+          name="password"
+          class="inputs"
+          type="password"
+          [(ngModel)]="user.password"
+          required
+          #password="ngModel"
+          [class.is-invalid]="password.invalid && password.touched"
+        />
+        <small
+          class="error-password"
+          [class.d-none]="password.valid || password.untouched"
+        >
+          Password Field is required
+        </small>
       </mat-form-field>
-      <mat-form-field>
-        <mat-label>Confirm password</mat-label>
-        <input name="confirmPassword" matInput class="inputs" type="password" />
-      </mat-form-field>
-      <button mat-raised-button type="submit" color="warn" class="button">
+      <mat-label>Confirm password</mat-label>
+      <input
+        name="confirmPassword"
+        matInput
+        class="inputs"
+        type="password"
+        (ngModel)="(user.password)"
+        #confirmPassword="ngModel"
+        required
+        [class.is-invalid]="confirmPassword.invalid && confirmPassword.touched"
+      />
+      <small
+        class="error-danger"
+        [class.d-none]="
+          confirmPassword.value == password.value || confirmPassword.untouched
+        "
+      >
+        Must match password
+      </small>
+
+      <button
+        [disabled]="registerForm.form.invalid"
+        mat-raised-button
+        type="submit"
+        color="warn"
+        class="button"
+      >
         Register
       </button>
       <div fxLayout="center center">

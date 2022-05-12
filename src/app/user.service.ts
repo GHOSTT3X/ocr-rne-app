@@ -12,9 +12,15 @@ export class UserService {
 
   public loginUser(user :User):Observable<any> {
     return this._http.post<any>("http://localhost:8070/signin", user)
-
-
   }
+
+  public registerUser(user :User):Observable<any> {
+    return this._http.post<any>("http://localhost:8070/signup", user)
+  }
+
+ 
+
+
 
  
 }
