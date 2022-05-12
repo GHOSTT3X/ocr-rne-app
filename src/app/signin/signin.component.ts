@@ -10,19 +10,19 @@ import { Router } from '@angular/router';
   styleUrls: ['./signin.component.css'],
 })
 export class SigninComponent implements OnInit {
+  hide = true;
   user = new User();
   message = '';
 
   constructor(private _service : UserService, private _route: Router) { }
 
-  ngOnInit(): void {}
+  ngOnInit(): void{}
 
   loginUser(){
     this._service.loginUser(this.user).subscribe(
       data => {
         console.log("Res recieved!");
         this._route.navigate(['/form'])
-
       },
       error =>{
       console.log("Exception Occured!");

@@ -14,7 +14,7 @@
         ><b>{{ message }}</b></small
       >
       <mat-form-field>
-        <mat-label>Username</mat-label>
+        <mat-label class="char">Username</mat-label>
         <input
           matInput
           name="username"
@@ -25,26 +25,36 @@
           [class.is-invalid]="username.invalid && username.touched"
         />
         <small
-          class="error-email"
+          class="text-danger"
           [class.d-none]="username.valid || username.untouched"
         >
           Username Field is required
         </small>
       </mat-form-field>
-      <mat-form-field>
-        <mat-label>Password</mat-label>
+      <mat-form-field appearance="fill">
+        <mat-label class="char">Enter your password</mat-label>
         <input
-          matInput
           name="password"
-          class="inputs"
+          matInput
+          [type]="hide ? 'password' : 'text'"
           type="password"
           [(ngModel)]="user.password"
           required
           #password="ngModel"
           [class.is-invalid]="password.invalid && password.touched"
         />
+        <button
+          class="hide"
+          mat-icon-button
+          matSuffix
+          (Click)="hide = !hide"
+          [attr.aria-label]="'Hide password'"
+          [attr.aria-pressed]="hide"
+        >
+          <mat-icon>{{ hide ? "visibility_off" : "visibility" }}</mat-icon>
+        </button>
         <small
-          class="error-password"
+          class="text-danger"
           [class.d-none]="password.valid || password.untouched"
         >
           Password Field is required
@@ -60,7 +70,7 @@
         Login
       </button>
       <div fxLayout="center center">
-        <p>You don't have an account?</p>
+        <p class="char">You don't have an account?</p>
         <b><a routerLink="/signup" class="alink">Sign up</a></b>
       </div>
     </form>

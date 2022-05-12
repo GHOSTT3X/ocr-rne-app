@@ -12,7 +12,7 @@ export class SignupComponent implements OnInit {
 
   user = new User();
   message = '';
-
+ 
   constructor(private _service:UserService, private _router: Router) { }
 
   ngOnInit(): void {
@@ -22,11 +22,11 @@ export class SignupComponent implements OnInit {
     this._service.registerUser(this.user).subscribe(
       data =>{
         console.log("res recieved");
-        this.message="User created successfully!";
+        this._router.navigate(['/signin'])
     },
       error => {
         console.log("Exception Occured");
-        this.message = error.error;
+        this.message = "User already exist";
     }  )
   }
 

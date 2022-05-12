@@ -1,3 +1,4 @@
+
 .image{
     background-repeat: no-repeat;
     min-height: 100%;
@@ -7,8 +8,10 @@
     position: fixed;
     top: 0;
     left: 0;
-
 }
+
+
+
 .inputs{
     padding: 4px;
     font-family: Montserrat;
@@ -17,6 +20,11 @@
 
 .toolbar{
     margin-bottom: 10px;
+    font-family: Montserrat;
+}
+
+.char{
+    font-family: Montserrat;
 }
 
 .button{
@@ -50,4 +58,16 @@ a{
     font-size: 14px;
     color: red;
     
+}
+
+.label{
+    color: bla;
+}
+
+.text-danger{
+    font-family: Montserrat;
+}
+
+.error{
+    font-family: Montserrat;
 }
