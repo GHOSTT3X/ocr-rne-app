@@ -14,6 +14,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { FormComponent } from './form/form.component'
+import { NgToastModule } from 'ng-angular-popup'
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { FormComponent } from './form/form.component'
     FormComponent,
   ],
   imports: [
+    NgToastModule,
     BrowserAnimationsModule,
     MatToolbarModule,
     MatCardModule,

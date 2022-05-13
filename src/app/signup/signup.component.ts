@@ -2,6 +2,9 @@ import { UserService } from './../user.service';
 import { Component, OnInit } from '@angular/core';
 import { User } from '../user';
 import {  Router } from '@angular/router';
+import { NotificationsService } from 'angular2-notifications';
+import { NgToastService } from 'ng-angular-popup';
+
 
 @Component({
   selector: 'app-signup',
@@ -12,8 +15,11 @@ export class SignupComponent implements OnInit {
 
   user = new User();
   message = '';
+  
  
-  constructor(private _service:UserService, private _router: Router) { }
+  constructor(private _service:UserService, private _router: Router, private toast: NgToastService) { }
+
+  
 
   ngOnInit(): void {
   }
@@ -23,6 +29,8 @@ export class SignupComponent implements OnInit {
       data =>{
         console.log("res recieved");
         this._router.navigate(['/signin'])
+        this.toast.success({detail: "Account Created",  duration: 10000})
+     
     },
       error => {
         console.log("Exception Occured");
@@ -30,7 +38,5 @@ export class SignupComponent implements OnInit {
     }  )
   }
 
-
-
-
+ 
 }

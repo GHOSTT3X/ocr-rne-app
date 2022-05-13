@@ -18,9 +18,7 @@ export class UserService {
     return this._http.post<any>("http://localhost:8070/signup", user)
   }
 
- 
-
-
-
- 
 }
+
+
+
