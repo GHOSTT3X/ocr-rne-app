@@ -29,7 +29,7 @@ export class SignupComponent implements OnInit {
       data =>{
         console.log("res recieved");
         this._router.navigate(['/signin'])
-        this.toast.success({detail: "Account Created",  duration: 10000})
+        this.toast.success({detail: "Account Created",  duration: 2000})
      
     },
       error => {

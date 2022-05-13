@@ -15,7 +15,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { FormComponent } from './form/form.component'
 import { NgToastModule } from 'ng-angular-popup'
-
+import {MatSelectModule} from '@angular/material/select';
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,6 +23,7 @@ import { NgToastModule } from 'ng-angular-popup'
     FormComponent,
   ],
   imports: [
+    MatSelectModule,
     NgToastModule,
     BrowserAnimationsModule,
     MatToolbarModule,
