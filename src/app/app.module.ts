@@ -16,13 +16,26 @@ import { FormsModule } from '@angular/forms';
 import { FormComponent } from './form/form.component'
 import { NgToastModule } from 'ng-angular-popup'
 import {MatSelectModule} from '@angular/material/select';
+import {AccordionModule} from 'primeng/accordion';  
+
+  
+import {MatDialogModule} from '@angular/material/dialog';
+import { FormlistComponent } from './formlist/formlist.component';
+import { ViewformComponent } from './viewform/viewform.component';
+
 @NgModule({
   declarations: [
     AppComponent,
     routingComponents,
     FormComponent,
+    FormlistComponent,
+    ViewformComponent,
+   
+    
   ],
   imports: [
+    MatDialogModule,
+    AccordionModule,
     MatSelectModule,
     NgToastModule,
     BrowserAnimationsModule,

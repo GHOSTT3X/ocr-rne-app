@@ -22,7 +22,7 @@ export class SigninComponent implements OnInit {
     this._service.loginUser(this.user).subscribe(
       data => {
         console.log("Res recieved!");
-        this._route.navigate(['/form'])
+        this._route.navigate(['/formlist'])
       },
       error =>{
       console.log("Exception Occured!");

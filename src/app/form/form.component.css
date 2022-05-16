@@ -1,3 +1,6 @@
+*{
+    font-family: Montserrat;
+}
 .image{
     background-repeat: no-repeat;
     min-height: 100%;
@@ -9,7 +12,16 @@
     left: 0;
   
 }
+.uploadFile{
+    position: relative;
+    bottom: 30px;
+}
 
+.option{
+    position: relative;
+    top: 50px;
+    left: 20px;
+}
 
 
 .big{
@@ -163,3 +175,31 @@ body {
 .btn-secondary{
     margin-right: 10px;
 }
+
+#cinNumber{
+    margin-left: px;
+}
+
+#firstName{
+    margin-left: 1px;
+}
+
+#lastName{
+    margin-left: 1px;
+}
+
+#date{
+    margin-left: 1px;
+}
+
+#nat{
+    margin-left: 1px;
+}
+
+#natNumber{
+    margin-left: 1px;
+}
+#addr{
+    margin-left: 1px;
+}
+
