@@ -1,3 +1,60 @@
 *{
     font-family: 'Cairo', sans-serif;
+    text-align: center;
+    
 }
+
+.container{
+    text-align: right;
+    
+}
+.image{
+    background-repeat: no-repeat;
+    min-height: 100%;
+    min-width: 990px;
+    width: 100%;
+    height: auto;
+    position:absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+
+
+#id{
+    position: relative;
+    bottom: 15px;
+}
+
+h1{
+    
+    padding-bottom: 20px;
+}
+
+button{
+    position: relative;
+    bottom: 20px;
+}
+
+#moua{
+    margin-left: 70px;
+}
+
+#adad {margin-left: 19px;}
+
+#tar {margin-left: 36px;}
+
+#tas {margin-left: 67px;}
+#tasla {margin-left: 12px;}
+#esmt {margin-left: 60px;}
+#esmtl{margin-left: 13px;}
+#mak {margin-right: 121px;}
+#makna {margin-right: 93px;}
+#kano {margin-left: 31px;}
+#ras {margin-left: 127px;}
+#adadf{margin-left: 156px;}
+#nara{margin-right: 50px;}
+#tarn{margin-left: 73px;}
+#tarech{margin-left: 100px;}
+#modat{margin-left: 138px;}
