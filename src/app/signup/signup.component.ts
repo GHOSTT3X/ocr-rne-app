@@ -2,7 +2,6 @@ import { UserService } from './../user.service';
 import { Component, OnInit } from '@angular/core';
 import { User } from '../user';
 import {  Router } from '@angular/router';
-import { NotificationsService } from 'angular2-notifications';
 import { NgToastService } from 'ng-angular-popup';
 
 

@@ -1,1 +1,111 @@
-<p>viewform works!</p>
+<h1>Form Details:</h1>
+<div fxLayoutAlign="center center">
+  <div *ngIf="form" class="container">
+    <div>
+      {{ form.id }}
+      <label> <b> :ID</b> </label><br />
+    </div>
+
+    <div>
+      <label>
+        {{ form.mouaref }}
+        <b> :المعرف الوحيد</b>
+      </label>
+    </div>
+
+    <div>
+      <label>
+        {{ form.adad_sejel }}
+        <b> :عدد السجل التجاري القديم</b>
+      </label>
+    </div>
+    <div>
+      <label
+        >{{ form.tarikh }}
+        <b> :تاريخ إستخراج المضمون </b>
+      </label>
+    </div>
+    <div>
+      <label>
+        {{ form.tasmiya }}
+        <b> :التسمية </b>
+      </label>
+    </div>
+    <div>
+      <label>
+        {{ form.tasmiyaLatin }}
+        <b> :بالالتينية التسمية </b>
+      </label>
+    </div>
+    <div>
+      <label
+        >{{ form.esmTijari }}
+        <b> :إسم التجاري </b>
+      </label>
+    </div>
+    <div>
+      <label
+        >{{ form.esmTijariLatin }}
+        <b> :إلسم التجاري بالالتينية </b>
+      </label>
+    </div>
+    <div>
+      <label
+        >{{ form.makarEjtima }}
+        <b> :المقر اإلجتماعي </b>
+      </label>
+    </div>
+    <div>
+      <label
+        >{{ form.makarNachat }}
+        <b> :مقر النشاط </b>
+      </label>
+    </div>
+    <div>
+      <label>
+        {{ form.nithamKanouni }}
+        <b> :النظام القانوني </b>
+      </label>
+    </div>
+    <div>
+      <label
+        >{{ form.rasMal }}
+        <b> :رأس المال</b>
+      </label>
+    </div>
+    <div>
+      <label
+        >{{ form.adadFar }}
+        <b> :عدد الفروع</b>
+      </label>
+    </div>
+    <div>
+      <label
+        >{{ form.nachatRaisi }}
+        <b> :النشاط الرئيسي</b>
+      </label>
+    </div>
+    <div>
+      <label
+        >{{ form.tarikhBideyetNachat }}
+        <b> :تاريخ بداية النشاط </b>
+      </label>
+    </div>
+    <div>
+      <label>
+        {{ form.tarikhEchhar }}
+        <b> :تاريخ الاشهار</b>
+      </label>
+    </div>
+    <div>
+      <label
+        >{{ form.modatCharika }}
+        <b> :مدة الشركة</b>
+      </label>
+    </div>
+
+    <br /><br />
+
+    <button (click)="gotolist()" class="btn btn-primary">Go Back</button><br />
+  </div>
+</div>

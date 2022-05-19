@@ -18,7 +18,7 @@
       </mat-form-field>
 
       <div class="card-body">
-        <form #addform="ngForm" (ngSubmit)="addFormFromSubmit()">
+        <form #updateForm="ngForm" (ngSubmit)="updateFormOnSubmit()">
           <!-- start of RNE form-->
           <div *ngIf="selectValue == 'rne'">
             <div class="uploadFile">
@@ -30,17 +30,19 @@
                 <div class="form-group">
                   <label class="labels" id="moua">المعرف الوحيد</label>
                   <input
+                    disabled
                     type="text"
                     class="form-control"
                     id="fullName"
                     [(ngModel)]="form.mouaref"
                     name="mouaref"
+                    placeholder="form.mouaref"
                   />
                 </div>
               </div>
               <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
                 <div class="form-group">
-                  <label class="labels" id="adadT" for="eMail"
+                  <label class="labels" for="eMail"
                     >عدد السجل التجاري القديم</label
                   >
                   <input
@@ -54,7 +56,7 @@
               </div>
               <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
                 <div class="form-group">
-                  <label class="labels" id="tarikhEs" for="phone"
+                  <label class="labels" for="phone"
                     >تاريخ إستخراج المضمون</label
                   >
                   <input
@@ -389,7 +391,7 @@
                   id="submit"
                   name="submit"
                   class="btn btn-secondary"
-                  routerLink="/formlist"
+                  (click)="gotolist()"
                 >
                   Cancel
                 </button>
@@ -399,7 +401,7 @@
                   name="submit"
                   class="btn btn-primary"
                 >
-                  Submit
+                  Save changes
                 </button>
               </div>
             </div>

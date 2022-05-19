@@ -17,11 +17,13 @@ import { FormComponent } from './form/form.component'
 import { NgToastModule } from 'ng-angular-popup'
 import {MatSelectModule} from '@angular/material/select';
 import {AccordionModule} from 'primeng/accordion';  
-
-  
 import {MatDialogModule} from '@angular/material/dialog';
 import { FormlistComponent } from './formlist/formlist.component';
 import { ViewformComponent } from './viewform/viewform.component';
+import {MatTableModule} from '@angular/material/table';
+import { EditformComponent } from './editform/editform.component';
+
+
 
 @NgModule({
   declarations: [
@@ -30,10 +32,12 @@ import { ViewformComponent } from './viewform/viewform.component';
     FormComponent,
     FormlistComponent,
     ViewformComponent,
+    EditformComponent,
    
     
   ],
   imports: [
+    MatTableModule,
     MatDialogModule,
     AccordionModule,
     MatSelectModule,

@@ -1,12 +1,43 @@
-<mat-toolbar>
+<mat-toolbar class="tooli" color="warn">
   <button
     mat-icon-button
     class="example-icon"
     aria-label="Example icon-button with menu icon"
   >
-    <mat-icon>supervised_user_circle</mat-icon>
+    <mat-icon>library_books</mat-icon>
   </button>
-  <span>Overview</span>
-  <span class="example-spacer"></span>
-  <button mat-raised-button color="primary">Add Client</button>
+
+  <span class="example-spacer">Documents Overview</span>
+
+  ><button type="button" class="addB" routerLink="/form">Add Client</button>
 </mat-toolbar>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">ID</th>
+      <th scope="col">Mouaref</th>
+      <th scope="col">adad adadSejel</th>
+      <th scope="col">tarikh</th>
+      <th scope="col">Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let form of forms | async">
+      <th scope="row">{{ form.id }}</th>
+      <td>{{ form.mouaref }}</td>
+      <td>{{ form.adad_sejel }}</td>
+      <td>{{ form.tarikh }}</td>
+      <div class="buttons">
+        <button (click)="updateForm(form.id)" class="btn btn-primary">
+          Edit</button
+        >&nbsp;
+        <button (click)="viewForm(form.id)" class="btn btn-info">View</button
+        >&nbsp;
+        <button (click)="deleteForm(form.id)" class="btn btn-danger">
+          Delete
+        </button>
+      </div>
+    </tr>
+  </tbody>
+</table>

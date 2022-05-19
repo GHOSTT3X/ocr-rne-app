@@ -1,5 +1,5 @@
 *{
-    font-family: 'Cairo', sans-serif;
+    font-family: Montserrat;
 }
 .image{
     background-repeat: no-repeat;
@@ -112,57 +112,51 @@ body {
 }
 
 #moua{
-    margin-left: 252px;
+    margin-left: 266px;
 
 }
 
 #tas{
-    margin-left: 290px;
+    margin-left: 301px;
 }
 
 #tastij{
-    margin-left: 265px;
-}
-#tarikhEs{
-    margin-left: 201px;
-}
-#adadT{
-    margin-left: 187px;
+    margin-left: 278px;
 }
 
 #taslat{
-    margin-left: 240px;
+    margin-left: 260px;
 }
 #makar{
-    margin-left: 242px;
+    margin-left: 264px;
 }
 #esemtij{
-    margin-left: 210px;
+    margin-left: 237px;
 }
 
 #makarnach{
-    margin-left: 270px;
+    margin-left: 285px;
 }
 #nitham{
-    margin-left: 245px;
-}
-#ras{
-    margin-left: 275px;
-}
-#adad{
     margin-left: 270px;
 }
+#ras{
+    margin-left: 286px;
+}
+#adad{
+    margin-left: 282px;
+}
 #nachra{
-    margin-left: 250px;
+    margin-left: 265px;
 }
 #bid{
-    margin-left: 235px;
+    margin-left: 255px;
 }
 #tar{
-    margin-left: 267px;
+    margin-left: 274px;
 }
 #modet{
-    margin-left: 264px;
+    margin-left: 285px;
 }
 
 .option{
@@ -209,10 +203,3 @@ body {
     margin-left: 1px;
 }
 
-.uploadButton{
-    margin-left: 85px;
-}
-
-.upload{
-    margin-left: 60px;
-}
