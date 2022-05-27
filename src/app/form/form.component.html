@@ -22,8 +22,14 @@
           <!-- start of RNE form-->
           <div *ngIf="selectValue == 'rne'">
             <div class="uploadFile">
-              <input type="file" (change)="onSelectedFile($event)" />
-              <button class="uploadButton">Scan Document</button>
+              <input type="file" (change)="imageChoice($event)" />
+              <button
+                type="button"
+                class="uploadButton"
+                (click)="sendFile(image)"
+              >
+                Scan Document
+              </button>
             </div>
             <div class="row gutters">
               <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
