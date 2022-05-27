@@ -37,6 +37,7 @@ export class FormlistComponent implements OnInit {
         this.ngOnInit();
       },
       error =>{
+        this.ngOnInit();
         console.log("Error! ID not found");
       }
     )

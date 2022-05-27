@@ -11,7 +11,7 @@ import { NgToastService } from 'ng-angular-popup';
 })
 export class FormComponent implements OnInit {
   form = new Form();
-
+  nom : any = "";
   
     
   public image = null;
@@ -38,18 +38,31 @@ export class FormComponent implements OnInit {
 
       formdata.append('image', this.image);
 
-      this._http.post("http://localhost:8070/upload", formdata, { observe: 'response',   responseType: 'text'}).subscribe(
-        Response => {console.log(Response.body);
+      this._http.post("http://localhost:8070/upload", formdata, { observe: 'response',   responseType: 'json'}).subscribe(
+        (response: any) => {console.log(response.body);
+          this.form.mouaref = response.body.mouaref
+          this.form.adad_sejel = response.body.adad_sejel
+          this.form.tarikh = response.body.tarikh
+          this.form.esmTijari  = response.body.esmTijari
+          this.form.esmTijariLatin = response.body.esmTijariLatin
+          this.form.makarEjtima = response.body.makarEjtima
+          this.form.makarNachat = response.body.makarNachat
+          this.form.modatCharika = response.body.modatCharika
+          this.form.nachatRaisi = response.body.nachatRaisi
+          this.form.nithamKanouni = response.body.nithamKanouni
+          this.form.rasMal = response.body.rasMal
+          this.form.tarikhBideyetNachat = response.body.tarikhBideyetNachat
+          this.form.tarikhEchhar = response.body.tarikhEchhar
+          this.form.tasmiya = response.body.tasmiya
+          this.form.tasmiyaLatin = response.body.tasmiyaLatin
+          this.form.adadFar = response.body.adadFar
 
-        console.log(image)
-       
-        
         this.toast.success({detail: "Document Scanned Successfully",  duration: 2000})
         
         },error => console.log("Error Occured while Uploading Image")
       );
     }
-    return Response
+    
     
   }
 
