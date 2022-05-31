@@ -4,6 +4,9 @@ import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 import { Form } from '../form';
 import { NgToastService } from 'ng-angular-popup';
+import {delay} from 'rxjs/operators';
+
+
 @Component({
   selector: 'app-form',
   templateUrl: './form.component.html',
@@ -12,10 +15,8 @@ import { NgToastService } from 'ng-angular-popup';
 export class FormComponent implements OnInit {
   form = new Form();
   nom : any = "";
-  
-    
   public image = null;
-
+  showSpinner = false;
   message = '';
 
   selectValue: string = "rne"
@@ -25,6 +26,7 @@ export class FormComponent implements OnInit {
 
   ngOnInit(): void {
   }
+ 
 
   public imageChoice(theEventFromHtml: any) {
     this.image = theEventFromHtml.target.files[0];
@@ -33,7 +35,11 @@ export class FormComponent implements OnInit {
   public sendFile(image: any) {
 
     if (this.image !== null) {
-
+      
+      this.showSpinner = true;
+      setTimeout(() =>{
+        this.showSpinner = false;
+      }, 8000);
       const formdata: FormData = new FormData();
 
       formdata.append('image', this.image);

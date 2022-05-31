@@ -11,7 +11,7 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatCardModule} from '@angular/material/card';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { FormComponent } from './form/form.component'
 import { NgToastModule } from 'ng-angular-popup'
@@ -22,6 +22,9 @@ import { FormlistComponent } from './formlist/formlist.component';
 import { ViewformComponent } from './viewform/viewform.component';
 import {MatTableModule} from '@angular/material/table';
 import { EditformComponent } from './editform/editform.component';
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
+import {MatProgressBarModule} from '@angular/material/progress-bar';
+
 
 
 
@@ -33,10 +36,10 @@ import { EditformComponent } from './editform/editform.component';
     FormlistComponent,
     ViewformComponent,
     EditformComponent,
-   
-    
   ],
   imports: [
+    MatProgressBarModule,
+    MatProgressSpinnerModule,
     MatTableModule,
     MatDialogModule,
     AccordionModule,
@@ -54,8 +57,6 @@ import { EditformComponent } from './editform/editform.component';
     HttpClientModule,
     FormsModule,
     MatIconModule,
-
-    
   ],
   providers: [UserService],
   bootstrap: [AppComponent]
